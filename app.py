@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import *
+from views import *
 
 
 class Builder(ABC):
@@ -21,3 +22,6 @@ class RubikCreator(Builder):
         pass
 
 
+class Logger(Solver):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
